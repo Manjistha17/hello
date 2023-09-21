@@ -24,7 +24,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             make install
-  lint-test: 
+  lint-tests: 
     docker:
       - image: cimg/python:3.10.2
     
@@ -43,4 +43,4 @@ workflows:
   sample: 
     jobs:
       - build-and-test
-      - lint-test
+      - lint-tests
